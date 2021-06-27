@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Test Suite" duration-ms="137241" started-at="2021-06-27T08:17:15Z" finished-at="2021-06-27T08:19:32Z">
+    <groups>
+    </groups>
+    <test name="sports Name test" duration-ms="137241" started-at="2021-06-27T08:17:15Z" finished-at="2021-06-27T08:19:32Z">
+      <class name="Automation.BookMyShow.sportsNameCollectionTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:Automation.BookMyShow.sportsNameCollectionTest@36c88a32]" name="setup" is-config="true" duration-ms="5318" started-at="2021-06-27T08:17:15Z" finished-at="2021-06-27T08:17:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="clickAllLinks()[pri:0, instance:Automation.BookMyShow.sportsNameCollectionTest@36c88a32]" name="clickAllLinks" duration-ms="130614" started-at="2021-06-27T08:17:20Z" finished-at="2021-06-27T08:19:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickAllLinks -->
+        <test-method status="PASS" signature="closeDriver()[pri:0, instance:Automation.BookMyShow.sportsNameCollectionTest@36c88a32]" name="closeDriver" is-config="true" duration-ms="1223" started-at="2021-06-27T08:19:31Z" finished-at="2021-06-27T08:19:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeDriver -->
+      </class> <!-- Automation.BookMyShow.sportsNameCollectionTest -->
+    </test> <!-- sports Name test -->
+  </suite> <!-- Test Suite -->
+</testng-results>

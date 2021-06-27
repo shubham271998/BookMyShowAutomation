@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="9" passed="9">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Test Suite" duration-ms="277762" started-at="2021-06-27T10:32:35Z" finished-at="2021-06-27T10:37:13Z">
+    <groups>
+    </groups>
+    <test name="login test" duration-ms="24949" started-at="2021-06-27T10:32:35Z" finished-at="2021-06-27T10:33:00Z">
+      <class name="Automation.BookMyShow.loginFunctionalityTest">
+        <test-method status="PASS" signature="setup(java.lang.String, java.lang.String)[pri:0, instance:Automation.BookMyShow.loginFunctionalityTest@30b7c004]" name="setup" is-config="true" duration-ms="7514" started-at="2021-06-27T10:32:35Z" finished-at="2021-06-27T10:32:42Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[\\Screenshots\\test_0.png]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="openBrowser(java.lang.String, java.lang.String)[pri:0, instance:Automation.BookMyShow.loginFunctionalityTest@30b7c004]" name="openBrowser" duration-ms="6994" started-at="2021-06-27T10:32:42Z" finished-at="2021-06-27T10:32:49Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://in.bookmyshow.com/]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[\\Screenshots\\test_1.png]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method status="PASS" signature="signUpNCR(java.lang.String, java.lang.String)[pri:1, instance:Automation.BookMyShow.loginFunctionalityTest@30b7c004]" name="signUpNCR" duration-ms="1125" started-at="2021-06-27T10:32:49Z" finished-at="2021-06-27T10:32:51Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[\\Screenshots\\test_2.png]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[\\Screenshots\\test_3.png]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signUpNCR -->
+        <test-method status="PASS" signature="signUp(java.lang.String)[pri:2, instance:Automation.BookMyShow.loginFunctionalityTest@30b7c004]" name="signUp" duration-ms="2316" started-at="2021-06-27T10:32:51Z" finished-at="2021-06-27T10:32:53Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[\\Screenshots\\test_4.png]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signUp -->
+        <test-method status="PASS" signature="signUpUsingGoogle(java.lang.String)[pri:3, instance:Automation.BookMyShow.loginFunctionalityTest@30b7c004]" name="signUpUsingGoogle" duration-ms="966" started-at="2021-06-27T10:32:53Z" finished-at="2021-06-27T10:32:54Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[\\Screenshots\\test_5.png]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signUpUsingGoogle -->
+        <test-method status="PASS" signature="switchWindow(java.lang.String)[pri:4, instance:Automation.BookMyShow.loginFunctionalityTest@30b7c004]" name="switchWindow" duration-ms="4727" started-at="2021-06-27T10:32:54Z" finished-at="2021-06-27T10:32:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[\\Screenshots\\test_6.png]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- switchWindow -->
+        <test-method status="PASS" signature="closeDriver()[pri:0, instance:Automation.BookMyShow.loginFunctionalityTest@30b7c004]" name="closeDriver" is-config="true" duration-ms="1182" started-at="2021-06-27T10:32:59Z" finished-at="2021-06-27T10:33:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeDriver -->
+      </class> <!-- Automation.BookMyShow.loginFunctionalityTest -->
+    </test> <!-- login test -->
+    <test name="movie Name test" duration-ms="18292" started-at="2021-06-27T10:33:01Z" finished-at="2021-06-27T10:33:19Z">
+      <class name="Automation.BookMyShow.movieNameCollectionTest">
+        <test-method status="PASS" signature="setup(java.lang.String, java.lang.String)[pri:0, instance:Automation.BookMyShow.movieNameCollectionTest@56de5251]" name="setup" is-config="true" duration-ms="4205" started-at="2021-06-27T10:33:01Z" finished-at="2021-06-27T10:33:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[\\Screenshots\\test_0.png]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="openBrowser(java.lang.String, java.lang.String)[pri:0, instance:Automation.BookMyShow.movieNameCollectionTest@56de5251]" name="openBrowser" duration-ms="8299" started-at="2021-06-27T10:33:05Z" finished-at="2021-06-27T10:33:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://in.bookmyshow.com/]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[\\Screenshots\\test_1.png]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method status="PASS" signature="signUpNCR(java.lang.String, java.lang.String)[pri:1, instance:Automation.BookMyShow.movieNameCollectionTest@56de5251]" name="signUpNCR" duration-ms="1550" started-at="2021-06-27T10:33:13Z" finished-at="2021-06-27T10:33:15Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[\\Screenshots\\test_2.png]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[\\Screenshots\\test_3.png]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signUpNCR -->
+        <test-method status="PASS" signature="moviesData()[pri:2, instance:Automation.BookMyShow.movieNameCollectionTest@56de5251]" name="moviesData" duration-ms="3454" started-at="2021-06-27T10:33:15Z" finished-at="2021-06-27T10:33:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- moviesData -->
+        <test-method status="PASS" signature="closeDriver()[pri:0, instance:Automation.BookMyShow.movieNameCollectionTest@56de5251]" name="closeDriver" is-config="true" duration-ms="780" started-at="2021-06-27T10:33:18Z" finished-at="2021-06-27T10:33:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeDriver -->
+      </class> <!-- Automation.BookMyShow.movieNameCollectionTest -->
+    </test> <!-- movie Name test -->
+    <test name="sports Name test" duration-ms="233819" started-at="2021-06-27T10:33:19Z" finished-at="2021-06-27T10:37:13Z">
+      <class name="Automation.BookMyShow.sportsNameCollectionTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:Automation.BookMyShow.sportsNameCollectionTest@7c469c48]" name="setup" is-config="true" duration-ms="2334" started-at="2021-06-27T10:33:19Z" finished-at="2021-06-27T10:33:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="clickAllLinks()[pri:0, instance:Automation.BookMyShow.sportsNameCollectionTest@7c469c48]" name="clickAllLinks" duration-ms="228495" started-at="2021-06-27T10:33:21Z" finished-at="2021-06-27T10:37:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickAllLinks -->
+        <test-method status="PASS" signature="closeDriver()[pri:0, instance:Automation.BookMyShow.sportsNameCollectionTest@7c469c48]" name="closeDriver" is-config="true" duration-ms="2990" started-at="2021-06-27T10:37:10Z" finished-at="2021-06-27T10:37:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeDriver -->
+      </class> <!-- Automation.BookMyShow.sportsNameCollectionTest -->
+    </test> <!-- sports Name test -->
+  </suite> <!-- Test Suite -->
+</testng-results>
