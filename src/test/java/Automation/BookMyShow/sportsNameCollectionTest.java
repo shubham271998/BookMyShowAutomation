@@ -14,7 +14,6 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-
 public class sportsNameCollectionTest{
 	String userDIR = System.getProperty("user.dir");
 	  //Initializing the driver
@@ -270,14 +269,15 @@ public class sportsNameCollectionTest{
     	   Thread.sleep(3000);
     	   
     	  //click on price button again
-    	   
     	   driver.findElement(By.xpath("//*[@id=\"super-container\"]/div[2]/div[4]/div[1]/div[1]/div[2]/div[4]/div/div[1]")).click();
     	   
-    	   //click on above 2000 range button
+    	   //click on 501-2000 range button
+    	   driver.findElement(By.xpath("//*[@id=\"super-container\"]/div[2]/div[4]/div[1]/div[1]/div[2]/div[4]/div[2]/div[3]/div[2]/div/div")).click();	   
     	   
+    	   //click on above 2000 range button
     	   driver.findElement(By.xpath("//*[@id=\"super-container\"]/div[2]/div[4]/div[1]/div[1]/div[2]/div[4]/div[2]/div[4]/div[2]/div/div")).click();
 
-    	   // Details of the games which is greater than 2000  
+    	   // Details of the games which is greater than 500
     	   
     	   // 21th game details
      	   js.executeScript("window.scrollBy(200,350)");
