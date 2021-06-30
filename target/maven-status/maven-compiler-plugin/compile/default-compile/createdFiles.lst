@@ -1,2 +1,5 @@
-Automation\BookMyShow\ScreenShotFunctionality.class
 Automation\BookMyShow\WebDriverFactory.class
+Automation\BookMyShow\DriverSetup.class
+Automation\BookMyShow\ExtentReportManager.class
+Automation\BookMyShow\ScreenShotFunctionality.class
+Automation\BookMyShow\DateUtils.class

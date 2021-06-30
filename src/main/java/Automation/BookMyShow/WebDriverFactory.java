@@ -1,5 +1,7 @@
 package Automation.BookMyShow;
 
+import java.net.MalformedURLException;
+
 //IMPORTS
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -21,16 +23,18 @@ public class WebDriverFactory {
 	}
 	
 	//Setter
-	public static WebDriver setDriver(String browser) {
+	public static WebDriver setDriver(String browser) throws Exception {
 		userDIR = System.getProperty("user.dir");
 		
 		if(browser.equalsIgnoreCase("chrome")) {
 			System.setProperty("webdriver.chrome.driver", userDIR+"\\WebDrivers\\chromedriver.exe"); //Setting Property
-			driver  = new ChromeDriver();																//creating driver object
+			//driver  = new ChromeDriver();																//creating driver object
+		    driver = DriverSetup.getRemoteWebDriver("chrome");
 		}
 		else if(browser.equalsIgnoreCase("firefox")) {
 			System.setProperty("webdriver.gecko.driver", userDIR+"\\WebDrivers\\geckodriver.exe");  //Setting Property
-			driver  = new FirefoxDriver();																//creating driver object
+			//driver  = new FirefoxDriver();																//creating driver object
+			driver = DriverSetup.getRemoteWebDriver("firefox");
 		}
 		else if (browser.equalsIgnoreCase("edge")) {
 			System.setProperty("webdriver.msedge.driver", "userDIR+\\WebDrivers\\msedgedriver.exe");  //Setting Property

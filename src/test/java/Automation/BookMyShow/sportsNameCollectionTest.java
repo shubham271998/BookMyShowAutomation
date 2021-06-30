@@ -5,7 +5,6 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -14,12 +13,17 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+
+
 public class sportsNameCollectionTest{
 	String userDIR = System.getProperty("user.dir");
 	  //Initializing the driver
 	    WebDriver driver;
 	    Properties prop = new Properties();
-	    
+	    ExtentReports report = ExtentReportManager.getReportInstance();
 	    @BeforeMethod
 	    public void setup(){
  
@@ -39,7 +43,7 @@ public class sportsNameCollectionTest{
 		
 		@Test
 		public void clickAllLinks() throws IOException, InterruptedException{
-			//open the page 
+			
 			driver.get("https://in.bookmyshow.com/");
             
              //to accept the pop up window
@@ -58,6 +62,8 @@ public class sportsNameCollectionTest{
           
    
         //click on sports link
+         	ExtentTest logger = report.createTest("sports");
+         	logger.log(Status.INFO, "sports displayed");
              driver.findElement(By.xpath("//*[@id='super-container']/div[2]/header/div[2]/div/div/div/div[1]/div/a[5]")).click();
              //Thread.sleep(4000);
              
@@ -73,15 +79,14 @@ public class sportsNameCollectionTest{
      	     //Thread.sleep(4000);
      	     
      	    js.executeScript("window.scrollBy(200,300)");
-     	    Thread.sleep(3000);
      	    
      	    //click on price button
      	    driver.findElement(By.xpath("//*[@id=\'super-container\']/div[2]/div[4]/div[1]/div[1]/div[2]/div[4]/div/div[1]")).click();
-     	    Thread.sleep(3000);
+     	    
      	    
      	    //click on 0-500 range button
      	    driver.findElement(By.xpath("//*[@id='super-container']/div[2]/div[4]/div[1]/div[1]/div[2]/div[4]/div[2]/div[2]/div[2]/div/div")).click();
-     	   Thread.sleep(3000);
+     	   
      	    
      	 
          //creating a properties file to store the data related to games
@@ -113,7 +118,7 @@ public class sportsNameCollectionTest{
     	   
     	   
     	   driver.navigate().back();
-    	   Thread.sleep(3000);
+    	  
     	   
     	   //second game details
     	   js.executeScript("window.scrollBy(200,350)");
@@ -133,7 +138,7 @@ public class sportsNameCollectionTest{
     	   System.out.println(gamePrice2);
     	   
     	   driver.navigate().back();
-    	   Thread.sleep(3000);
+    	  
     	   
     	 //Third game details
     	   js.executeScript("window.scrollBy(200,350)");
@@ -153,7 +158,8 @@ public class sportsNameCollectionTest{
     	   System.out.println(gamePrice3);
     	   
     	   driver.navigate().back();
-    	   Thread.sleep(3000);
+    	   Thread.sleep(2000);
+    	   
     	   
     	 //Fourth game details
     	   js.executeScript("window.scrollBy(200,350)");
@@ -173,7 +179,7 @@ public class sportsNameCollectionTest{
     	   System.out.println(gamePrice4);
     	   
     	   driver.navigate().back();
-    	   Thread.sleep(3000);
+    	   Thread.sleep(2000);
     	   
     	   
     	   // now scroll further down for next 4 games
@@ -198,7 +204,7 @@ public class sportsNameCollectionTest{
     	   System.out.println(gamePrice5);
     	   
     	   driver.navigate().back();
-    	   Thread.sleep(3000);
+    	   Thread.sleep(2000);
     	   
     	 //Sixth game details
     	   js.executeScript("window.scrollBy(350,950)");
@@ -218,7 +224,7 @@ public class sportsNameCollectionTest{
     	   System.out.println(gamePrice6);
     	   
     	   driver.navigate().back();
-    	   Thread.sleep(3000);
+    	   Thread.sleep(2000);
     	   
     	 //Seventh game details
     	   js.executeScript("window.scrollBy(350,950)");
@@ -238,7 +244,7 @@ public class sportsNameCollectionTest{
     	   System.out.println(gamePrice7);
     	   
     	   driver.navigate().back();
-    	   Thread.sleep(3000);
+    	   Thread.sleep(2000);
     	   
     	 //8th game details
     	   js.executeScript("window.scrollBy(350,950)");
@@ -258,25 +264,28 @@ public class sportsNameCollectionTest{
     	   System.out.println(gamePrice8);
     	   
     	   driver.navigate().back();
-    	   Thread.sleep(3000);
+    	   Thread.sleep(2000);
     	   
     	  
           //scroll to the 0-500 range 
           js.executeScript("window.scrollBy(200,300)");
+          Thread.sleep(2000);
           
           //click on 0-500 button again to deselect the same
           driver.findElement(By.xpath("//*[@id='super-container']/div[2]/div[4]/div[1]/div[1]/div[2]/div[4]/div[2]/div[2]/div[2]/div/div")).click();
-    	   Thread.sleep(3000);
+    	   
     	   
     	  //click on price button again
     	   driver.findElement(By.xpath("//*[@id=\"super-container\"]/div[2]/div[4]/div[1]/div[1]/div[2]/div[4]/div/div[1]")).click();
     	   
     	   //click on 501-2000 range button
     	   driver.findElement(By.xpath("//*[@id=\"super-container\"]/div[2]/div[4]/div[1]/div[1]/div[2]/div[4]/div[2]/div[3]/div[2]/div/div")).click();	   
+    	   Thread.sleep(2000);
     	   
     	   //click on above 2000 range button
     	   driver.findElement(By.xpath("//*[@id=\"super-container\"]/div[2]/div[4]/div[1]/div[1]/div[2]/div[4]/div[2]/div[4]/div[2]/div/div")).click();
-
+    	   Thread.sleep(2000);
+    	   
     	   // Details of the games which is greater than 500
     	   
     	   // 21th game details
@@ -298,7 +307,8 @@ public class sportsNameCollectionTest{
     	   
     	   
     	   driver.navigate().back();
-    	   Thread.sleep(3000);
+    	   Thread.sleep(2000);
+    	   
     	   
     	// 22th game details
      	   js.executeScript("window.scrollBy(200,350)");
@@ -318,7 +328,8 @@ public class sportsNameCollectionTest{
     	   System.out.println(gamePrice22);
     	   
     	   driver.navigate().back();
-    	   Thread.sleep(3000);
+    	   Thread.sleep(2000);
+    	   
     	   
     	  prop.store(writeFile, null);
     	   writeFile.close();     
@@ -329,6 +340,7 @@ public class sportsNameCollectionTest{
 	  @AfterMethod
 		//function to close the driver
 		public void closeDriver(){
+		  report.flush();
 			driver.quit();
 		}
 	  

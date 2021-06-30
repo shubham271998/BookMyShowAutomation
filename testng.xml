@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Test Suite">
 
-	<parameter name="browser" value="chrome"></parameter>
+	<parameter name="browser" value="firefox"></parameter>
 	<parameter name="URL" value="https://in.bookmyshow.com/">
 	</parameter>
 	<parameter name="Path0" value="\\Screenshots\\test_0.png">
@@ -28,7 +28,7 @@
 	<parameter name="Path10" value="\\Screenshots\\test_10.png">
 	</parameter>
 
-	
+
 	<test name="login test">
 		<classes>
 			<class name="Automation.BookMyShow.loginFunctionalityTest" />
