@@ -15,19 +15,25 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+
+
 public class movieNameCollectionTest {
 	String userDIR = System.getProperty("user.dir");
 	String mainPageHandle;
 	JavascriptExecutor js;
 	// Initializing the driver
 	WebDriver driver;
+	ExtentReports report = ExtentReportManager.getReportInstance();
 
 	Properties prop = new Properties();
 
 	@Parameters({ "browser", "Path0" })
 	@BeforeTest
 	public void setup(String browser, String Path0) throws Exception {
-
+      
 		driver = WebDriverFactory.setDriver(browser);
 
 		driver.manage().timeouts().implicitlyWait(180, TimeUnit.SECONDS);
@@ -45,7 +51,8 @@ public class movieNameCollectionTest {
 	@Parameters({ "URL", "Path1" })
 	@Test(priority = 0)
 	public void openBrowser(String URL, String Path1) throws Exception {
-		// opening the page
+    	
+    	//opening the page 
 		driver.get(URL);
 		// getting the page title
 		String title = driver.getTitle();
@@ -67,7 +74,6 @@ public class movieNameCollectionTest {
 	@Parameters({ "Path2", "Path3" })
 	@Test(priority = 1)
 	public void signUpNCR(String Path2, String Path3) throws Exception {
-
 		mainPageHandle = driver.getWindowHandle();
 
 		try {
@@ -76,7 +82,7 @@ public class movieNameCollectionTest {
 		catch (ScreenshotException e) {
 			System.out.println("Unable to take Screen Shot");
 		}
-
+        
 		driver.findElement(By.xpath("//button[@class='Sign me Up!']")).click();
 
 		// select the city as 'NCR'
@@ -92,8 +98,9 @@ public class movieNameCollectionTest {
 
 	@Test(priority = 2)
 	public void moviesData() {
-
+		ExtentTest logger = report.createTest("moviesData");
 		// click on movies button
+		logger.log(Status.INFO, "movies opened");
 		driver.findElement(By.xpath("//*[@id=\'super-container\']/div[2]/header/div[2]/div/div/div/div[1]/div/a[1]"))
 				.click();
 
@@ -176,6 +183,7 @@ public class movieNameCollectionTest {
 	@AfterTest
 	// function to close the driver
 	public void closeDriver() {
+		report.flush();
 		driver.quit();
 	}
 

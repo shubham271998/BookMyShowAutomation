@@ -14,16 +14,20 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+
 public class loginFunctionalityTest {
 	String userDIR = System.getProperty("user.dir");
 	String mainPageHandle;
 	JavascriptExecutor js;
 	  //Initializing the driver
 	    WebDriver driver;
-	    
 	    Properties prop = new Properties();
+	    ExtentReports report = ExtentReportManager.getReportInstance();
 	    
-	    @Parameters({"browser","Path0"})
+	   @Parameters({"browser","Path0"})
 	    @BeforeTest
 	    public void setup(String browser, String Path0) throws Exception{
  
@@ -42,7 +46,12 @@ public class loginFunctionalityTest {
 	    @Parameters({"URL","Path1"})
 	    @Test(priority = 0)
 	    public void openBrowser(String URL, String Path1) throws Exception{
+	    	
+	    	//addition of extent report
+	    	ExtentTest logger = report.createTest("openBrowser");
+	    	
 	    	//opening the page 
+	    	logger.log(Status.INFO, "Initializing the Browser ");
 	    	driver.get(URL);
 	    	//getting the page title
 	    	String title = driver.getTitle(); 
@@ -62,15 +71,17 @@ public class loginFunctionalityTest {
 	    public void signUpNCR(String Path2, String Path3) throws Exception{
 	    	
 	        mainPageHandle = driver.getWindowHandle();
-            
+           ExtentTest logger = report.createTest("select city");
+	    	
 	        try{ScreenShotFunctionality.takeSnapShot(driver, userDIR + Path2 );} //Take Screenshot
 	 		catch(ScreenshotException e) {System.out.println("Unable to take Screen Shot");}
 	                
 	        
             driver.findElement(By.xpath("//button[@class='Sign me Up!']")).click();
-            
+	    	
     
             //select the city as 'NCR'
+            logger.log(Status.INFO, "select city");
           driver.findElement(By.xpath("//img[@alt='NCR']")).click();
     //        Thread.sleep(2000);
             
@@ -83,7 +94,8 @@ public class loginFunctionalityTest {
 	    @Parameters("Path4")
 	    @Test(priority = 2)
 	    public void signUp(String Path4) throws Exception{
-	    	
+	    	ExtentTest logger = report.createTest("signin");
+	    	logger.log(Status.INFO, "signin initializing");
 	    	 driver.findElement(By.xpath("//div[text()='Sign in']")).click();
 	    	 
 	    	 driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -97,6 +109,8 @@ public class loginFunctionalityTest {
 	    @Test(priority = 3)
 	    public void signUpUsingGoogle(String Path5) throws Exception{
 	    	//click on google link
+	    	ExtentTest logger = report.createTest("signUpUsingGoogle");
+	    	logger.log(Status.INFO, "google link clicked");
             driver.findElement(By.xpath("//*[@id=\"modal-root\"]/div/div/div/div/div[2]/div/div[1]/div/div[2]/div/div")).click();
             driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
             
@@ -109,6 +123,8 @@ public class loginFunctionalityTest {
 	    @Test(priority = 4)
 	    public void switchWindow(String Path6) throws Exception{
 	    	 //get all the window links
+	    	ExtentTest logger = report.createTest("switchWindow");
+	    	logger.log(Status.INFO, "window switched");
             Set<String> windowIDs = driver.getWindowHandles();
             
             //get the title of sign in window
@@ -147,6 +163,7 @@ public class loginFunctionalityTest {
 	    @AfterTest
 		// function to close the driver
 		public void closeDriver() {
+	    	report.flush();
 			driver.quit();
 		}
 

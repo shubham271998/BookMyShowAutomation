@@ -18,22 +18,12 @@
     <classes>
       <class name="Automation.BookMyShow.loginFunctionalityTest">
         <methods>
-          <include name="switchWindow" invocation-numbers="0"/>
+          <include name="signUp" invocation-numbers="0"/>
+          <include name="signUpUsingGoogle" invocation-numbers="0"/>
           <include name="setup"/>
           <include name="closeDriver"/>
         </methods>
       </class> <!-- Automation.BookMyShow.loginFunctionalityTest -->
     </classes>
   </test> <!-- login test(failed) -->
-  <test thread-count="5" name="sports Name test(failed)">
-    <classes>
-      <class name="Automation.BookMyShow.sportsNameCollectionTest">
-        <methods>
-          <include name="clickAllLinks"/>
-          <include name="setup"/>
-          <include name="closeDriver"/>
-        </methods>
-      </class> <!-- Automation.BookMyShow.sportsNameCollectionTest -->
-    </classes>
-  </test> <!-- sports Name test(failed) -->
 </suite> <!-- Failed suite [Test Suite] -->
