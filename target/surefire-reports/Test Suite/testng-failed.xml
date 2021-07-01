@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Test Suite]" guice-stage="DEVELOPMENT" verbose="0">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Test Suite]">
   <parameter name="Path9" value="\\Screenshots\\test_9.png"/>
   <parameter name="Path6" value="\\Screenshots\\test_6.png"/>
   <parameter name="Path5" value="\\Screenshots\\test_5.png"/>
@@ -14,7 +14,7 @@
   <parameter name="Path4" value="\\Screenshots\\test_4.png"/>
   <parameter name="Path3" value="\\Screenshots\\test_3.png"/>
   <parameter name="Path0" value="\\Screenshots\\test_0.png"/>
-  <test thread-count="5" name="sports Name test(failed)" verbose="0">
+  <test thread-count="5" verbose="0" name="sports Name test(failed)">
     <classes>
       <class name="Automation.BookMyShow.sportsNameCollectionTest">
         <methods>
