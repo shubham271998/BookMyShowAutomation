@@ -7,6 +7,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
+
+//class for remote driver using selenium grid
 public class DriverSetup {
 	
 	public static WebDriver getRemoteWebDriver(String value) throws MalformedURLException {
