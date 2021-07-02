@@ -18,6 +18,7 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
+//implementation of login using google
 public class loginFunctionalityTest {
 	String userDIR = System.getProperty("user.dir");
 	String mainPageHandle;
@@ -43,6 +44,7 @@ public class loginFunctionalityTest {
 	    }
 	    
 	 
+	   //test method to open the browser
 	    @Parameters({"URL","Path1"})
 	    @Test(priority = 0)
 	    public void openBrowser(String URL, String Path1) throws Exception{
@@ -62,15 +64,22 @@ public class loginFunctionalityTest {
 	    	//Waiting 
 	    	 driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 	    	 
+	    	 //screenshot taken
 	    	 try{ScreenShotFunctionality.takeSnapShot(driver, userDIR + Path1 );} //Take Screenshot
 	 		catch(ScreenshotException e) {System.out.println("Unable to take Screen Shot");}
 	    }
 	    
+	    
+	    //select the city as NCR 
 	    @Parameters({"Path2","Path3"})
 	    @Test(priority = 1)
 	    public void signUpNCR(String Path2, String Path3) throws Exception{
 	    	
+	    	
+	    	//get the main page handle
 	        mainPageHandle = driver.getWindowHandle();
+	        
+	        //extent report
            ExtentTest logger = report.createTest("select city");
 	    	
 	        try{ScreenShotFunctionality.takeSnapShot(driver, userDIR + Path2 );} //Take Screenshot
@@ -83,14 +92,14 @@ public class loginFunctionalityTest {
             //select the city as 'NCR'
             logger.log(Status.INFO, "select city");
           driver.findElement(By.xpath("//img[@alt='NCR']")).click();
-    //        Thread.sleep(2000);
-            
    
           try{ScreenShotFunctionality.takeSnapShot(driver, userDIR + Path3 );} //Take Screenshot
 	 		catch(ScreenshotException e) {System.out.println("Unable to take Screen Shot");}
             
 	    }
 	    
+	    
+	    //signup button
 	    @Parameters("Path4")
 	    @Test(priority = 2)
 	    public void signUp(String Path4) throws Exception{

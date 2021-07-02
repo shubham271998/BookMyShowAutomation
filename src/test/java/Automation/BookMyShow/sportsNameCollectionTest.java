@@ -80,20 +80,25 @@ public class sportsNameCollectionTest{
              driver.findElement(By.xpath("//*[@id='super-container']/div[2]/div[4]/div[1]/div[1]/div[2]/div[1]/div[2]/div[3]/div[2]/div/div")).click();
      	     //Thread.sleep(4000);
      	    
-
-     	        List<WebElement> eventNames= driver.findElements(By.xpath("//div[contains(@class,'style__VerticalCardContainer')]/div/div[contains(@class,'commonStyles__CardTextBox')][1]/div"));
-     	        List<WebElement> eventPrices= driver.findElements(By.xpath("//div[contains(@class,'style__VerticalCardContainer')]/div/div[contains(@class,'commonStyles__CardTextBox')][4]/div"));
-     	        HashMap<String, Integer> events= new HashMap<String, Integer>();
-     	        for(int i=0;i<eventNames.size();i++){
-     	            String s[]= eventPrices.get(i).getText().split(" ");
+                //storing all sports name
+     	        List<WebElement> SportsNames= driver.findElements(By.xpath("//div[contains(@class,'style__VerticalCardContainer')]/div/div[contains(@class,'commonStyles__CardTextBox')][1]/div"));
+     	        
+     	        //storing all sports price
+     	        List<WebElement> SportsPrices= driver.findElements(By.xpath("//div[contains(@class,'style__VerticalCardContainer')]/div/div[contains(@class,'commonStyles__CardTextBox')][4]/div"));
+     	        
+     	        //putting names and prices in map as key and value
+     	        HashMap<String, Integer> sports= new HashMap<String, Integer>();
+     	        for(int i=0;i<SportsNames.size();i++){
+     	            String s[]= SportsPrices.get(i).getText().split(" ");
 
      	            int sPrice=Integer.parseInt(s[1]);
-     	            events.put(eventNames.get(i).getText(),sPrice);
+     	            sports.put(SportsNames.get(i).getText(),sPrice);
      	        }
-     	        System.out.println(events);
-
+     	        System.out.println(sports);
+       
+     	        //sorting and displaying all the sports based on price
        List<Map.Entry<String, Integer> > list =
-     	                new LinkedList<Map.Entry<String, Integer> >(events.entrySet());
+     	                new LinkedList<Map.Entry<String, Integer> >(sports.entrySet());
 
 
      	        Collections.sort(list, new Comparator<Map.Entry<String, Integer> >() {
@@ -109,9 +114,14 @@ public class sportsNameCollectionTest{
      	        for (Map.Entry<String, Integer> aa : list) {
      	            temp.put(aa.getKey(), aa.getValue());
      	        }
+     	        //printing the sorted list
      	        System.out.println(temp);
+     	        
+     	        
+     	    //code to display all the games 
      	       
-   	        for(String e: events.keySet()){
+     	      int count = 0;
+   	        for(String e: sports.keySet()){
      	            System.out.println(e);
      	            if(e.contains("'")){
      	                String newName[]= e.split("'");
@@ -134,6 +144,10 @@ public class sportsNameCollectionTest{
      	            }
      	            System.out.println(dt);
      	            driver.navigate().back();
+     	            count += 1;
+     	            if (count == 4){
+     	            	break;
+     	            }
      	        }
 
      	    }
