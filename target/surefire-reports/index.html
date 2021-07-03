@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Test_Suite" class="navigator-link">
-              <span class="suite-name border-failed">Test Suite</span>
+              <span class="suite-name border-passed">Test Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,21 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">9 methods, 1 failed,   8 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Test_Suite" class="hide-methods failed suite-Test_Suite"> (hide)</a> <!-- hide-methods failed suite-Test_Suite -->
-                      <a href="#" panel-name="suite-Test_Suite" class="show-methods failed suite-Test_Suite"> (show)</a> <!-- show-methods failed suite-Test_Suite -->
-                    </span>
-                    <div class="method-list-content failed suite-Test_Suite">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Test_Suite" title="Automation.BookMyShow.sportsNameCollectionTest" class="method navigator-link" hash-for-method="clickAllLinks">clickAllLinks</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Test_Suite -->
+                    <span class="method-stats">9 methods,   9 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -114,6 +100,11 @@
                       <a href="#" panel-name="suite-Test_Suite" class="show-methods passed suite-Test_Suite"> (show)</a> <!-- show-methods passed suite-Test_Suite -->
                     </span>
                     <div class="method-list-content passed suite-Test_Suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Test_Suite" title="Automation.BookMyShow.sportsNameCollectionTest" class="method navigator-link" hash-for-method="clickAllLinks">clickAllLinks</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Test_Suite" title="Automation.BookMyShow.movieNameCollectionTest" class="method navigator-link" hash-for-method="moviesData">moviesData</a> <!-- method navigator-link -->
@@ -166,40 +157,6 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Test_Suite" class="panel Test_Suite">
-          <div class="suite-Test_Suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">Automation.BookMyShow.sportsNameCollectionTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="clickAllLinks">
-                  </a> <!-- clickAllLinks -->
-                  <span class="method-name">clickAllLinks</span>
-                  <div class="stack-trace">org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
-from disconnected: received Inspector.detached event
-  (Session info: chrome=91.0.4472.124)
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-P8L6JL1&apos;, ip: &apos;192.168.231.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.11&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\srao9\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:50418}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 65988529fb23ef587f1bc9d625c27cd3
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.back(RemoteWebDriver.java:849)
-	at Automation.BookMyShow.sportsNameCollectionTest.clickAllLinks(sportsNameCollectionTest.java:226)
-... Removed 33 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Test_Suite-class-failed -->
           <div class="suite-Test_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -227,6 +184,21 @@ Session ID: 65988529fb23ef587f1bc9d625c27cd3
                   </a> <!-- signUpNCR(\\Screenshots\\test_2.png, \\Screenshots\\test_3.png) -->
                   <span class="method-name">signUpNCR</span>
                   <span class="parameters">(\\Screenshots\\test_2.png, \\Screenshots\\test_3.png)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Test_Suite-class-passed -->
+          <div class="suite-Test_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">Automation.BookMyShow.sportsNameCollectionTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="clickAllLinks">
+                  </a> <!-- clickAllLinks -->
+                  <span class="method-name">clickAllLinks</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -296,7 +268,7 @@ Session ID: 65988529fb23ef587f1bc9d625c27cd3
   &lt;parameter name=&quot;Path7&quot; value=&quot;\\Screenshots\\test_7.png&quot;/&gt;
   &lt;parameter name=&quot;URL&quot; value=&quot;https://in.bookmyshow.com/&quot;/&gt;
   &lt;parameter name=&quot;Path10&quot; value=&quot;\\Screenshots\\test_10.png&quot;/&gt;
-  &lt;parameter name=&quot;browser&quot; value=&quot;firefox&quot;/&gt;
+  &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
   &lt;parameter name=&quot;Path2&quot; value=&quot;\\Screenshots\\test_2.png&quot;/&gt;
   &lt;parameter name=&quot;Path1&quot; value=&quot;\\Screenshots\\test_1.png&quot;/&gt;
   &lt;parameter name=&quot;Path4&quot; value=&quot;\\Screenshots\\test_4.png&quot;/&gt;
@@ -364,44 +336,44 @@ data.addRows(9);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'clickAllLinks')
 data.setCell(0, 2, 'Automation.BookMyShow.sportsNameCollectionTest')
-data.setCell(0, 3, 180623);
+data.setCell(0, 3, 54905);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'openBrowser')
-data.setCell(1, 2, 'Automation.BookMyShow.loginFunctionalityTest')
-data.setCell(1, 3, 29064);
+data.setCell(1, 2, 'Automation.BookMyShow.movieNameCollectionTest')
+data.setCell(1, 3, 17142);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'openBrowser')
-data.setCell(2, 2, 'Automation.BookMyShow.movieNameCollectionTest')
-data.setCell(2, 3, 11300);
+data.setCell(2, 1, 'switchWindow')
+data.setCell(2, 2, 'Automation.BookMyShow.loginFunctionalityTest')
+data.setCell(2, 3, 16524);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'moviesData')
 data.setCell(3, 2, 'Automation.BookMyShow.movieNameCollectionTest')
-data.setCell(3, 3, 9893);
+data.setCell(3, 3, 11506);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'signUp')
+data.setCell(4, 1, 'openBrowser')
 data.setCell(4, 2, 'Automation.BookMyShow.loginFunctionalityTest')
-data.setCell(4, 3, 3975);
+data.setCell(4, 3, 10243);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'signUpNCR')
+data.setCell(5, 1, 'signUp')
 data.setCell(5, 2, 'Automation.BookMyShow.loginFunctionalityTest')
-data.setCell(5, 3, 3788);
+data.setCell(5, 3, 2431);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'signUpUsingGoogle')
+data.setCell(6, 1, 'signUpNCR')
 data.setCell(6, 2, 'Automation.BookMyShow.loginFunctionalityTest')
-data.setCell(6, 3, 2018);
+data.setCell(6, 3, 2100);
 data.setCell(7, 0, 7)
 data.setCell(7, 1, 'signUpNCR')
 data.setCell(7, 2, 'Automation.BookMyShow.movieNameCollectionTest')
-data.setCell(7, 3, 1481);
+data.setCell(7, 3, 1859);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'switchWindow')
+data.setCell(8, 1, 'signUpUsingGoogle')
 data.setCell(8, 2, 'Automation.BookMyShow.loginFunctionalityTest')
-data.setCell(8, 3, 529);
+data.setCell(8, 3, 876);
 window.suiteTableData['Test_Suite']= { tableData: data, tableDiv: 'times-div-Test_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 4 minutes</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Test_Suite">
               </div> <!-- times-div-Test_Suite -->
             </div> <!-- times-div -->
@@ -429,72 +401,70 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">Automation.BookMyShow.loginFunctionalityTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
-                <span class="method-name">setup(firefox, \\Screenshots\\test_0.png)</span>
+                <span class="method-name">setup(chrome, \\Screenshots\\test_0.png)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">openBrowser(https://in.bookmyshow.com/, \\Screenshots\\test_1.png)</span>
-                <span class="method-start">107583 ms</span>
+                <span class="method-start">9702 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">signUpNCR(\\Screenshots\\test_2.png, \\Screenshots\\test_3.png)</span>
-                <span class="method-start">136652 ms</span>
+                <span class="method-start">19949 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">signUp(\\Screenshots\\test_4.png)</span>
-                <span class="method-start">140441 ms</span>
+                <span class="method-start">22050 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">signUpUsingGoogle(\\Screenshots\\test_5.png)</span>
-                <span class="method-start">144419 ms</span>
+                <span class="method-start">24482 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">switchWindow(\\Screenshots\\test_6.png)</span>
-                <span class="method-start">146437 ms</span>
+                <span class="method-start">25359 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">closeDriver</span>
-                <span class="method-start">146968 ms</span>
+                <span class="method-start">41886 ms</span>
               </div> <!-- configuration-test after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Automation.BookMyShow.movieNameCollectionTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
-                <span class="method-name">setup(firefox, \\Screenshots\\test_0.png)</span>
-                <span class="method-start">155461 ms</span>
+                <span class="method-name">setup(chrome, \\Screenshots\\test_0.png)</span>
+                <span class="method-start">48293 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">openBrowser(https://in.bookmyshow.com/, \\Screenshots\\test_1.png)</span>
-                <span class="method-start">172555 ms</span>
+                <span class="method-start">54378 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">signUpNCR(\\Screenshots\\test_2.png, \\Screenshots\\test_3.png)</span>
-                <span class="method-start">183855 ms</span>
+                <span class="method-start">71521 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">moviesData</span>
-                <span class="method-start">185337 ms</span>
+                <span class="method-start">73381 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">closeDriver</span>
-                <span class="method-start">195231 ms</span>
+                <span class="method-start">84887 ms</span>
               </div> <!-- configuration-test after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Automation.BookMyShow.sportsNameCollectionTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">201012 ms</span>
+                <span class="method-start">86280 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">clickAllLinks</span>
-                <span class="method-start">211478 ms</span>
+                <span class="method-start">94091 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeDriver</span>
-                <span class="method-start">392169 ms</span>
+                <span class="method-start">148997 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

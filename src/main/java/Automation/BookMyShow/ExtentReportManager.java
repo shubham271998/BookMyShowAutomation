@@ -21,8 +21,8 @@ public class ExtentReportManager {
             report.setSystemInfo("Build Number", "10.8.1");
             report.setSystemInfo("Browser", "Chrome");
 
-            htmlReporter.config().setDocumentTitle("UAT UI Automation Results");
-            htmlReporter.config().setReportName("All Headlines UI Test Report");
+            htmlReporter.config().setDocumentTitle("BOOK MY SHOW AUTOMATION");
+            htmlReporter.config().setReportName("Test Report");
             htmlReporter.config().setTestViewChartLocation(ChartLocation.TOP);
             htmlReporter.config().setTimeStampFormat("MM dd, yyyy HH:mm:ss");
         }

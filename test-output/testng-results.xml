@@ -1,98 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Test Suite" duration-ms="84480" started-at="2021-06-30T08:00:22Z" finished-at="2021-06-30T08:01:46Z">
+  <suite name="Test Suite" duration-ms="46727" started-at="2021-07-03T17:52:54Z" finished-at="2021-07-03T17:53:41Z">
     <groups>
     </groups>
-    <test name="login test" duration-ms="84480" started-at="2021-06-30T08:00:22Z" finished-at="2021-06-30T08:01:46Z">
-      <class name="Automation.BookMyShow.loginFunctionalityTest">
-        <test-method status="PASS" signature="setup(java.lang.String, java.lang.String)[pri:0, instance:Automation.BookMyShow.loginFunctionalityTest@41d477ed]" name="setup" is-config="true" duration-ms="46530" started-at="2021-06-30T08:00:22Z" finished-at="2021-06-30T08:01:08Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[firefox]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[\\Screenshots\\test_0.png]]>
-              </value>
-            </param>
-          </params>
+    <test name="sports Name test" duration-ms="46727" started-at="2021-07-03T17:52:54Z" finished-at="2021-07-03T17:53:41Z">
+      <class name="Automation.BookMyShow.sportsNameCollectionTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:Automation.BookMyShow.sportsNameCollectionTest@59474f18]" name="setup" is-config="true" duration-ms="1882" started-at="2021-07-03T17:52:54Z" finished-at="2021-07-03T17:52:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="openBrowser(java.lang.String, java.lang.String)[pri:0, instance:Automation.BookMyShow.loginFunctionalityTest@41d477ed]" name="openBrowser" duration-ms="14149" started-at="2021-06-30T08:01:08Z" finished-at="2021-06-30T08:01:22Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[https://in.bookmyshow.com/]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[\\Screenshots\\test_1.png]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="PASS" signature="clickAllLinks()[pri:0, instance:Automation.BookMyShow.sportsNameCollectionTest@59474f18]" name="clickAllLinks" duration-ms="43260" started-at="2021-07-03T17:52:56Z" finished-at="2021-07-03T17:53:39Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="signUpNCR(java.lang.String, java.lang.String)[pri:1, instance:Automation.BookMyShow.loginFunctionalityTest@41d477ed]" name="signUpNCR" duration-ms="5139" started-at="2021-06-30T08:01:22Z" finished-at="2021-06-30T08:01:28Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[\\Screenshots\\test_2.png]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[\\Screenshots\\test_3.png]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- signUpNCR -->
-        <test-method status="PASS" signature="signUp(java.lang.String)[pri:2, instance:Automation.BookMyShow.loginFunctionalityTest@41d477ed]" name="signUp" duration-ms="1255" started-at="2021-06-30T08:01:28Z" finished-at="2021-06-30T08:01:29Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[\\Screenshots\\test_4.png]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- signUp -->
-        <test-method status="PASS" signature="signUpUsingGoogle(java.lang.String)[pri:3, instance:Automation.BookMyShow.loginFunctionalityTest@41d477ed]" name="signUpUsingGoogle" duration-ms="5490" started-at="2021-06-30T08:01:29Z" finished-at="2021-06-30T08:01:34Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[\\Screenshots\\test_5.png]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- signUpUsingGoogle -->
-        <test-method status="PASS" signature="switchWindow(java.lang.String)[pri:4, instance:Automation.BookMyShow.loginFunctionalityTest@41d477ed]" name="switchWindow" duration-ms="5614" started-at="2021-06-30T08:01:34Z" finished-at="2021-06-30T08:01:40Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[\\Screenshots\\test_6.png]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- switchWindow -->
-        <test-method status="PASS" signature="closeDriver()[pri:0, instance:Automation.BookMyShow.loginFunctionalityTest@41d477ed]" name="closeDriver" is-config="true" duration-ms="6060" started-at="2021-06-30T08:01:40Z" finished-at="2021-06-30T08:01:46Z">
+        </test-method> <!-- clickAllLinks -->
+        <test-method status="PASS" signature="closeDriver()[pri:0, instance:Automation.BookMyShow.sportsNameCollectionTest@59474f18]" name="closeDriver" is-config="true" duration-ms="1550" started-at="2021-07-03T17:53:39Z" finished-at="2021-07-03T17:53:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeDriver -->
-      </class> <!-- Automation.BookMyShow.loginFunctionalityTest -->
-    </test> <!-- login test -->
+      </class> <!-- Automation.BookMyShow.sportsNameCollectionTest -->
+    </test> <!-- sports Name test -->
   </suite> <!-- Test Suite -->
 </testng-results>

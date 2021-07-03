@@ -1,10 +1,15 @@
 package Automation.BookMyShow;
 
+
+import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -29,6 +34,7 @@ public class movieNameCollectionTest {
 	ExtentReports report = ExtentReportManager.getReportInstance();
 
 	Properties prop = new Properties();
+	
 
 	@Parameters({ "browser", "Path0" })
 	@BeforeTest
@@ -97,12 +103,11 @@ public class movieNameCollectionTest {
 	}
 
 	@Test(priority = 2)
-	public void moviesData() {
+	public void moviesData() throws Exception {
 		ExtentTest logger = report.createTest("moviesData");
 		// click on movies button
 		logger.log(Status.INFO, "movies opened");
-		driver.findElement(By.xpath("//*[@id=\'super-container\']/div[2]/header/div[2]/div/div/div/div[1]/div/a[1]"))
-				.click();
+		driver.findElement(By.xpath("//*[@id=\"super-container\"]/div[2]/header/div[2]/div/div/div/div[1]/div/a[1]")).click();
 
 		// click on upcoming movies
 		driver.findElement(
@@ -111,71 +116,18 @@ public class movieNameCollectionTest {
 
 		// create a list to store the language of movies
 		List<String> list = new ArrayList<String>();
-
-		String hindi = driver
-				.findElement(By.xpath("//*[@id=\"super-container\"]/div[2]/div[4]/div[2]/div[2]/div/div[1]/div/div"))
-				.getText();
-		list.add(hindi);
-		String English = driver
-				.findElement(
-						By.xpath("//*[@id=\"super-container\"]/div[2]/div[4]/div[2]/div[2]/div/div[2]/div/div/div"))
-				.getText();
-		list.add(English);
-		String Telugu = driver
-				.findElement(
-						By.xpath("//*[@id=\"super-container\"]/div[2]/div[4]/div[2]/div[2]/div/div[3]/div/div/div"))
-				.getText();
-		list.add(Telugu);
-		String Tamil = driver
-				.findElement(
-						By.xpath("//*[@id=\"super-container\"]/div[2]/div[4]/div[2]/div[2]/div/div[4]/div/div/div"))
-				.getText();
-		list.add(Tamil);
-		String Malayalam = driver
-				.findElement(
-						By.xpath("//*[@id=\"super-container\"]/div[2]/div[4]/div[2]/div[2]/div/div[6]/div/div/div"))
-				.getText();
-		list.add(Malayalam);
-		String Marathi = driver
-				.findElement(
-						By.xpath("//*[@id=\"super-container\"]/div[2]/div[4]/div[2]/div[2]/div/div[7]/div/div/div"))
-				.getText();
-		list.add(Marathi);
-		String Bengali = driver
-				.findElement(
-						By.xpath("//*[@id=\"super-container\"]/div[2]/div[4]/div[2]/div[2]/div/div[8]/div/div/div"))
-				.getText();
-		list.add(Bengali);
-		String Punjabi = driver
-				.findElement(
-						By.xpath("//*[@id=\"super-container\"]/div[2]/div[4]/div[2]/div[2]/div/div[9]/div/div/div"))
-				.getText();
-		list.add(Punjabi);
-		String Bhojpuri = driver
-				.findElement(
-						By.xpath("//*[@id=\"super-container\"]/div[2]/div[4]/div[2]/div[2]/div/div[10]/div/div/div"))
-				.getText();
-		list.add(Bhojpuri);
-		String Gujarati = driver
-				.findElement(
-						By.xpath("//*[@id=\"super-container\"]/div[2]/div[4]/div[2]/div[2]/div/div[11]/div/div/div"))
-				.getText();
-		list.add(Gujarati);
-		String Assamese = driver
-				.findElement(
-						By.xpath("//*[@id=\"super-container\"]/div[2]/div[4]/div[2]/div[2]/div/div[12]/div/div/div"))
-				.getText();
-		list.add(Assamese);
-		String Rajasthani = driver
-				.findElement(
-						By.xpath("//*[@id=\"super-container\"]/div[2]/div[4]/div[2]/div[2]/div/div[13]/div/div/div"))
-				.getText();
-		list.add(Rajasthani);
-		String Sanskrit = driver
-				.findElement(
-						By.xpath("//*[@id=\"super-container\"]/div[2]/div[4]/div[2]/div[2]/div/div[14]/div/div/div"))
-				.getText();
-		list.add(Sanskrit);
+		FileOutputStream out = new FileOutputStream("movies.xlsx");
+		XSSFWorkbook workbook = new XSSFWorkbook();
+		XSSFSheet sheet = workbook.createSheet("moviesName");	
+		Row row = sheet.createRow(0);
+		for (int i=1;i<15;i++) {
+			String var = driver
+					.findElement(By.xpath("//*[@id=\"super-container\"]/div[2]/div[3]/div[2]/div[2]/div/div[" + i + "]")).getText();
+			row.createCell(i-1).setCellValue(var);
+			list.add(var);
+		}
+		
+		workbook.write(out);
 
 		System.out.println(list);
 	}
